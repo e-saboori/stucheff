@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Visualizer by spoonacular</title>
+    <meta name="author" content="David Urbansky">
+    <meta name="description" content="A spoonacular nutrition visualizer demo for recipes.">
+    <meta name="keywords" content="spoonacular, API, nutrition, nutrients, visualization, demo, app">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://spoonacular.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://spoonacular.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <h1>spoonacular Nutrition Visualizer</h1>
+
+        <p>Create an informative and attractive visualization of nutritional information of a recipe.</p>
+
+        <h3>Ingredients</h3>
+        <textarea v-model="ingredients" name="ingredients" style="height:150px;width:calc(100% - 20px);padding:10px"
+            placeholder="one ingredient per line, such as &quot;200 grams of cucumber&quot;"></textarea>
+
+        <h3>Number of Servings</h3>
+        <input name="servings" type="number" style="width:45px;padding:10px;" v-model="servings" /><br><br>
+
+        <div class="button" (click)="previewNutritionWidget()">Preview Nutrition Visualizer</div>
+
+        <iframe id="previewWidget"></iframe>
+        <textarea id="temp"></textarea>
+
+        <!-- shameless plug -->
+        <div id="spoonacular">
+            powered by<br>
+            <a href="https://spoonacular.com/food-api">
+                <img src="https://spoonacular.com/application/frontend/images/logo-simple-framed-green-gradient.svg"
+                    alt="spoonacular logo"><br>
+                spoonacular API
+            </a>
+        </div>
+    </div>
+
+    
+  
+</body>
+
+</html>
